@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/6c568e9b09.js" crossorigin="anonymous"></script>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/branding-identity-corporate-vector-logo-m-design_460848-10168.avif" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <h1>Hi, I'm <span>Manaswini</span><br></h1>
+        </div>
+    </div>
+</div> 
+<!--------------about---------------->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user.jpeg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>I'm a data science student, pursuing my bachelors, who appreciates making connections between concepts and applications from various sectors. 
+                Currently, I'm developing my technical expertise and academic foundation in engineering, artificial intelligence, and machine learning. 
+                My passion is finding solutions to the challenges using specialized data, algorithms, and programming.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Data Science</span><br>Data Cleaning and visualization</li>
+                        <li><span>Web Development</span><br>Django and Flask</li>
+                        <li><span>Devops</span><br>Docker,Kubernetes</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>TuringIQ</span><br>Junior Data Analyst</li>
+                        <li><span>Neuro Nexus</span><br>Data Sceintist</li>
+                        <li><span>PWC</span><br>AI-Ml Trainee </li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2021-2025</span><br>B.tech from KL University</li>
+                        <li><span>2019-2021</span><br>Intermediate from Sri Bhavishya Junior College</li>
+                        <li><span>2018-2019</span><br>Nalanda Vidya Niketan</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!------------services----------------------->
+
+<!-----------------------portfolio-------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/superstore.png">
+                <div class="layer">
+                    <h3>Super store Data Analysis</h3>
+                    <p>Responsible for leveraging the Superstore dataset to analyse and identify actionable insights, 
+                    contributing to data-driven decision-making and supporting business growth initiatives.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/biometrics_facial_recognition.jpg">
+                <div class="layer">
+                    <h3>Facial Expression Classification</h3>
+                    <p>Facial expression classification leverages deep learning algorithms, such as convolutional neural networks (CNNs), 
+                    to analyze and accurately identify emotions based on intricate patterns in facial features, enabling robust and real-time emotion recognition applications.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/Rock-Paper-Scissor.webp">
+                <div class="layer">
+                    <h3>Rock-Paper-Scissors</h3>
+                    <p>A simple rock-paper-scissors project in Python utilizes basic if-else statements to determine the winner, comparing user input to randomly generated computer choice for a straightforward implementation of the classic game.</p>
+                    <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+<!-----------------contact------------------>
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> manaswini3104@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 9063263955</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/sreeramsrungavarapu/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://twitter.com/i/flow/login"><i class="fa-brands fa-twitter-square"></i></a>
+                    <a href="https://www.instagram.com/manaswiniiiiii_/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/srungavarapu-manaswini-780754226/"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet" >
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Srungavarapu Manaswini <i class="fa-solid fa-heart"></i></p>
+    </div>
+</div>
+
+<script>
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+    var sidemenu = document.getElementById("sidemenu");
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+
+</script>
+
+  
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxIc3luqTrZmwg-Yfiw-e5hMKpKmCKY3MNZnjrOegJlAsAJ3dU7pZrz66hwrbQCxx8k/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML = "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
